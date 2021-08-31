@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,36 +8,7 @@
   font-family: "Inter", sans-serif;
 }
 
-.main-container h2 {
-  font-size: 2rem;
-  color: hsl(0, 0%, 100%);
-}
-
-.main-container h3 {
-  font-size: 1.5rem;
-  color: hsl(0, 0%, 100%);
-}
-
-.main-container p {
-  color: hsla(0, 0%, 100%, 0.6);
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.image-container {
-  max-width: 50%;
-  background-color: hsl(277, 64%, 61%);
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.main-container {
+body {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -44,19 +17,44 @@ img {
 }
 
 .main-card {
-  max-width: 800px;
+  max-width: 900px;
   display: flex;
-  margin: 0 auto;
   background-color: hsl(244, 38%, 16%);
   border-radius: 8px;
 }
 
-.main-text {
+.left-container {
   width: 50%;
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.left-container h2 {
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.left-container h3 {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.left-container p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  border-radius: 0 8px 8px 0;
+}
+
+.image-container {
+  max-width: 50%;
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 0 8px 8px 0;
 }
 
 .main-stats {
@@ -65,35 +63,37 @@ img {
 }
 
 @media only screen and (max-width: 800px) {
-  .main-card {
-    max-width: 350px;
-    flex-direction: column-reverse;
+  body {
+    height: auto;
   }
 
-  .main-text {
+  .main-card {
+    max-width: 375px;
+    flex-direction: column-reverse;
+    margin: 4rem 2rem;
+  }
+
+  .left-container {
     width: 100%;
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 
   img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 8px 8px 0 0;
+    height: 310px;
   }
 
   .image-container {
     max-width: 100%;
-    height: auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    height: 310px;
+    border-radius: 8px 8px 0 0;
   }
 
   .main-stats {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 }
